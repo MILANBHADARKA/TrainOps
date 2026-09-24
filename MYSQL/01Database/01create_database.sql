@@ -1,0 +1,7 @@
+CREATE DATABASE TrainingTracker;
+
+SHOW DATABASES;
+
+USE TrainingTracker;
+
+SELECT DATABASE();
