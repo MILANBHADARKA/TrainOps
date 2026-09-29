@@ -12,6 +12,7 @@ SELECT
 FROM Members
 ORDER BY activity_date DESC;
 
+
 -- Find all members involved in a specific topic (EX., 1), either as a trainee or a reconciler.
 -- Use case: A topic is being updated, and we need a unique list of emails to notify
 SELECT m.email, m.member_name, 'Trainee' AS interaction_type
@@ -32,6 +33,7 @@ FROM Progress p
 WHERE
     p.topic_id = 1;
 
+
 -- Generate a combined report of all Pending tasks for a specific user (User ID 2).
 -- Use case: User logs in, clicks the notification bell, and sees a list of things they need to do.
 SELECT 'Action Required: Start Topic' AS task_description, t.topic_name
@@ -48,11 +50,3 @@ WHERE
     p.jr_reconciler_id = 2
     AND p.jr_reconcile = 'Pending'
     AND p.status = 'Completed';
-
-
-
-
--- NOTES
--- UNION has to determine and remove duplicates.
--- UNION ALL doesn't need to do that.
--- So, if you know your queries will never return duplicates, use UNION ALL for better performance.

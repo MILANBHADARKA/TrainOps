@@ -56,4 +56,4 @@ CREATE INDEX idx_discussion_member ON Discussions (member_id);
 CREATE INDEX idx_topic_module ON Topics (module_id);
 
 -- Composite Index
--- CREATE INDEX idx_progress_member_topic ON Progress (member_id, topic_id);
+CREATE INDEX idx_progress_member_topic ON Progress (member_id, topic_id);

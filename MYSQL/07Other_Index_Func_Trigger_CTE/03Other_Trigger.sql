@@ -27,7 +27,7 @@ BEGIN
     END IF;
 END$$
 
-DELIMITER;
+DELIMITER ;
 
 -- Show all triggers in the current database
 SHOW TRIGGERS

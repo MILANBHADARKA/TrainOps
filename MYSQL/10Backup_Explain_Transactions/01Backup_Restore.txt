@@ -1,0 +1,26 @@
+BACKUP AND RESTORE
+
+In the real world, we don't use SQL queries to backup your database. 
+we use a command-line tool that comes installed with MySQL called `mysqldump`.
+
+1. HOW TO BACKUP YOUR DATABASE
+
+mysqldump -u root -p trainingtracker > C:\Users\bhada\Desktop\TrainingTracker_Backup.sql
+
+
+What this does: It generates a massive text file filled with every single `CREATE TABLE` and `INSERT INTO` statement needed to perfectly recreate your database.
+
+
+2. HOW TO RESTORE YOUR DATABASE
+Imagine your computer crashes, or you want to set up the database on a colleague's laptop.
+
+Step A: Log into MySQL Workbench and create a blank database:
+CREATE DATABASE trainingtracker_restore;
+
+Step B: Open your terminal and run this command to inject the backup data into the blank DB:
+
+mysql -u root -p trainingtracker < C:\Users\bhada\Desktop\TrainingTracker_Backup.sql
+
+or
+
+Get-Content "C:\Users\bhada\Desktop\TrainingTracker_Backup.sql" | & "C:\Program Files\MySQL\MySQL Server 8.0\bin\mysql.exe" -u root -p trainingtracker_restore

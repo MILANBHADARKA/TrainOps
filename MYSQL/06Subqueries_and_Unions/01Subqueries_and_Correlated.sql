@@ -1,4 +1,4 @@
--- Find the member(s) who have spent the absolute highest hours across the entire system.
+-- Find the member(s) who have spent the highest hours across the entire system.
 -- To find "Top Learners"
 SELECT p1.member_id, m.member_name, p1.hours_spent
 FROM Progress p1

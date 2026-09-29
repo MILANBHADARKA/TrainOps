@@ -1,7 +1,7 @@
 -- CTE (Common Table Expression): A temporary "named" query used within a larger query.
 
--- Use case: The admin wants a report showing each batch's total hours spent,
--- but ONLY for batches that have spent more than 100 hours total.
+-- Use case: The admin wants a report showing each batch's total hours spent, 
+-- but ONLY for batches that have spent more than 1 hours total.
 -- CTEs make complex queries much easier to read by breaking them into steps using 'WITH'.
 
 WITH
